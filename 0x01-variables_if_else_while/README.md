@@ -1,1 +1,1 @@
-0x01. C - Variables, if, else, while
+This repository contains the if, else and while variables.

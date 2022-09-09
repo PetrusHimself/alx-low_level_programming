@@ -1,21 +1,24 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+* main - Lanzador.
+*
+* Return: Always 0.
+*/
+
 int main(void)
 {
-int z;
+	char a = '0';
+	char l = 'a';
 
-for (z = 48; z <= 57; z++)
-{
-putchar(z);
-}
-for (z = 97; z <= 102;z++)
-{
-putchar(z)
-}
-putchar('\n');
-return (0);
+	for (a = '0'; a <= '9'; a++)
+	{
+		putchar(a);
+	}
+	for (l = 'a'; l <= 'f'; l++)
+	{
+		putchar(l);
+	}
+	putchar('\n');
+	return (0);
 }

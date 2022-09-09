@@ -1,18 +1,19 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+* main - Lanzador.
+*
+* Return: Always 0.
+*/
+
 int main(void)
 {
-int s;
-s = 122;
-while (s >= 97)
-{
-putchar(s);
-s--;
-}
-putchar('\n');
-return (0);
+	char z = 'z';
+
+	for (z = 'z'; z >= 'a'; z--)
+	{
+		putchar(z);
+	}
+	putchar('\n');
+	return (0);
 }

@@ -1,35 +1,30 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+* main - Print combinations of two digit numbers
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
-int x, y;
+  int tens;
+  int ones;
 
-for (x = 48; x <= 57; x++)
-{
-for (y = 48; y <= 57; y++)
-{
-if (x == y || y <= x)
-{
-}
-else
-{
-putchar(x);
-putchar(y);
-if (x == 56 && y == 57)
-{
-}
-else
-{
-putchar(44);
-putchar(' ');
-}
-}
-}
-}
-putchar('\n');
-return (0);
+  for (tens = 0; tens <= 9; tens++)
+    {
+      for (ones = tens + 1; ones <= 9; ones++)
+	{
+	  putchar(tens + '0');
+	  putchar(ones + '0');
+
+	  if (tens < 8)
+	    {
+	      putchar(',');
+	      putchar(' ');
+	    }
+	}
+    }
+  putchar('\n');
+
+  return (0);
 }
