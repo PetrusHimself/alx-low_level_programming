@@ -1,4 +1,4 @@
-#include main.h
+#include "main.h"
 /**
  * main - prints the string "Alx" from a character array.
  * Return: 0 on success.
