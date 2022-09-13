@@ -2,8 +2,7 @@
 ===================
 
 -   By Carrie Ybay
--   Ongoing project - started 08-31-2021, must end by 09-03-2021 (in 1 day) - you're done with 0% of tasks.
--   Checker was released at 09-01-2021 12:00 PM
+-   Project will start Sep 13, 2022 6:00 AM, must end by Sep 16, 2022 6:00 AM
 -   QA review fully automated.
 
 Resources
