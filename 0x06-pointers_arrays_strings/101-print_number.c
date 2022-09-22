@@ -1,4 +1,4 @@
-##include "main.h"
+#include "main.h"
 
 /**
  * main - check the code
@@ -18,7 +18,4 @@ int main(void)
 	print_number(-98);
 	_putchar('\n');
 	return (0);
-}
-Footer
-© 2022 GitHub, Inc.
 }
