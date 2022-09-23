@@ -1,25 +1,24 @@
 #include "main.h"
 
 /**
- * print_number - prints integer with only putchar
- * @n: Number to print
- *
- * Return: Nothing
+ * print_number - Prints an integer.
+ * @n: Integer to be printed.
  */
+
 void print_number(int n)
 {
-	unsigned int x;
+	unsigned int num = n;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n *= -1;
+
+		num = -num;
 	}
 
-	x = n;
+	if ((num / 10) > 0)
 
-	if (x / 10)
-		print_number(x / 10);
+		print_number(num / 10);
 
-	_putchar(x % 10 + '0');
+	_putchar((num % 10) + '0');
 }
