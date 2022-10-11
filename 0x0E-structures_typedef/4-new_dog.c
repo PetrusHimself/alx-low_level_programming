@@ -1,80 +1,42 @@
 #include "dog.h"
-
-
+#include <stdlib.h>
 /**
-*_strlen - returns length of
-*a string
-*@str: string to be counted
-*Return: returns length of string
-*/
-int _strlen(char *str)
-{
-int len = 0;
-while (str)
-len++;
-
-return (len);
-}
-
-
-/**
-*_strcopy - copy string pointed by src
-*into dest variable
-*@dest:buffer storing string copy
-*@src: buffer storing string to copy
-*Return:returns copied string
-*/
-char *_strcopy(char *dest, char *src)
-{
-int index = 0;
-
-for (; src[index] ; index++)
-dest[index] = src[index];
-
-dest[index] = '\0';
-return (dest);
-}
-
-
-
-
-/**
-*new_dog - creates a new dog
-*@name: name of new dog
-*@age: age of new dog
-*@owner: owner of new dog
-*Return: returns NULL in case
-*of failure
-*/
+ * new_dog - creates a new dog.
+ * @name: pointer to a char for name of dog
+ * @age: age of dog
+ * @owner: pointer to a char for owner of dog
+ * Return: pointer to a new dog of type dog_t
+ **/
 dog_t *new_dog(char *name, float age, char *owner)
 {
-dog_t *doggo;
+	int nameLen, ownerLen, i;
+	dog_t *d1;
 
-if (name == NULL || age < 0 || owner == NULL)
-return (NULL);
-
-doggo = malloc(sizeof(dog_t));
-if (doggo == NULL)
-return (NULL);
-
-doggo->name = malloc(sizeof(char) * (_strlen(name) + 1));
-if (doggo->name == NULL)
-{
-free(doggo);
-return (NULL);
-}
-
-doggo->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-if (doggo->owner == NULL)
-{
-free(doggo->name);
-free(doggo);
-return (NULL);
-}
-
-doggo->name = _strcopy(doggo->name, name);
-doggo->age = age;
-doggo->owner = _strcopy(doggo->owner, owner);
-
-return (doggo);
+	d1 = (dog_t *)malloc(sizeof(dog_t));
+	if (d1 == NULL)
+		return (NULL);
+	nameLen = ownerLen = 0;
+	while (name[nameLen++])
+		;
+	while (owner[ownerLen++])
+		;
+	d1->name = malloc(nameLen * sizeof(d1->name));
+	if (d1->name == NULL)
+	{
+		free(d1);
+		return (NULL);
+	}
+	for (i = 0; i <= nameLen; i++)
+		d1->name[i] = name[i];
+	d1->age = age;
+	d1->owner = malloc(ownerLen * sizeof(d1->owner));
+	if (d1->owner == NULL)
+	{
+		free(d1->name);
+		free(d1);
+		return (NULL);
+	}
+	for (i = 0; i <= ownerLen; i++)
+		d1->owner[i] = owner[i];
+	return (d1);
 }
