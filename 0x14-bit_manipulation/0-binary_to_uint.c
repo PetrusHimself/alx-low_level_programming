@@ -1,46 +1,48 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
+
 /**
- * binary_to_uint - converts a binary to an unsigned int
- * @b: the binary number as a string
- *
- * Return: the converted value
- */
+* _strlen - find the length of a string
+* @s: pointer to the string to check
+* Return: void
+*/
+
+
+int _strlen(const char *s)
+{
+int i = 0;
+while (s[i])
+	i++;
+
+return (i);
+}
+
+
+/**
+* binary_to_uint - converts a binary number to an unsigned int
+* @b: binary number
+*
+* Return: 0 or converted number
+*/
+
 unsigned int binary_to_uint(const char *b)
 {
-unsigned int decimal = 0;
-int str_len = 0, base = 1;
+	unsigned int n = 0;
+	int i, len;
 
-if (!check_valid_string(b))
-return (0);
+	if (b == NULL)
+		return (0);
 
-while (b[str_len] != '\0')
-str_len++;
+	len = _strlen(b);
 
-while (str_len)
-{
-decimal += ((b[str_len - 1] - '0') * base);
-base *= 2;
-str_len--;
-}
-return (decimal);
-}
+	for (i = 0; i != len; i++)
+	{
+		if (b[len - i - 1] == '1')
+			n += 1 << i;
+		else if (b[len - i - 1] != '0')
+			return (0);
+	}
 
-/**
- * check_valid_string - checks if a string has only 0's and 1's
- * @b: string to be checked
- *
- * Return: 1 if string is valid, 0 otherwise
- */
-int check_valid_string(const char *b)
-{
-if (b == NULL)
-return (0);
-
-while (*b)
-{
-if (*b != '1' && *b != '0')
-return (0);
-b++;
-}
-return (1);
+	return (n);
 }
