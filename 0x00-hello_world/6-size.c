@@ -1,11 +1,10 @@
 #include <stdio.h>
-/*
- * Main - this is my main function
- *
- * Return - always return 0
- *
- *
+
+/**
+ * main - prints the size of various types
+ * Return: 0 if exited properly, non-zero otherwise
  */
+
 int main(void)
 {
 	printf("Size of a char: %d byte(s)\n", sizeof(char));
