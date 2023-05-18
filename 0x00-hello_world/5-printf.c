@@ -1,13 +1,12 @@
 #include <stdio.h>
-
-/*
- * main - msin function of my project
- *
- * Retun: return 0 everytime
- *
- */
-
-int main () {
+/**
+*main - Main function
+*
+*
+*Return: return 0 everytime
+*/
+int main(void)
+{
 	printf("with proper grammar, but the outcome is a piece of art,\n");
-	return 0;
+	return (0);
 }
