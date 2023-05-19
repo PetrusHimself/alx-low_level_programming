@@ -1,15 +1,12 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
-
 /**
- * Main - this is my main function
- * printf 1 - to print if it is negative
- * printf 2 - to print if it is positive
- * printf 3 - to print if it is zero
- *
- * return - always return 0
- *
+*main - entry point of programs
+*
+* printf - print if the number is positive, negative or zero
+*
+*Return: return 0
 */
 int main(void)
 {
@@ -17,14 +14,15 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if (n < 0) {
-		printf("%d , is negative\n", n);
+	if (n < 0)
+	{
+		printf("%d is negative\n", n);
 	}
-	else if (n > 0) {	
-		printf("%d , is positive\n", n);
+	else if (n > 0)
+	{
+		printf("%d is positive\n", n);
 	}
-	else  {
-		printf("%d , is zero\n" ,n);
-	}
+	else
+		printf("%d is zero\n", n);
 	return (0);
 }
