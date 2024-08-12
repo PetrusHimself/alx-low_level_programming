@@ -1,7 +1,7 @@
 ALX Low-Level Programming & Algorithm Projects
 ==============================================
 
-![Project Overview](https://github.com/PetrusHimself/alx-low_level_programming/blob/master/Low-Level%20Programming.png))
+![Project Overview](https://github.com/PetrusHimself/alx-low_level_programming/blob/master/Low-Level%20Programming.png)
 
 Welcome to the repository for my ALX Low-Level Programming and Algorithm projects. This README provides an overview of all the projects I have completed during the ALX Software Engineering program. Each project focuses on building foundational skills in C programming, data structures, algorithms, and Unix/Linux system programming. Below, you'll find a list of the projects along with links to their respective directories in the repository.
 
