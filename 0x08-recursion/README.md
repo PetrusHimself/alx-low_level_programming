@@ -5,9 +5,6 @@ CRecursion
 
 *   By: Julien Barbier
 *   Weight: 1
-*   Project will start Jun 7, 2023 6:00 AM, must end by Jun 8, 2023 6:00 AM
-*   Checker was released at Jun 7, 2023 6:00 AM
-*   An auto review will be launched at the deadline
 
 ![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/219/a88.jpg)
 
